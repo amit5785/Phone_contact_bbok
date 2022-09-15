@@ -110,6 +110,13 @@ int main()
         string name;
         cin>>name;
         auto res=obj.matchContact(name,name);
+        
+        if(res.empty())
+        {
+          cout<<"No contact to display\n"<<endl;
+          continue;
+        }
+
         for(auto ind:res)
         {
           cout<<contName[ind]<<" "<<phoneNum[ind]<<endl;
